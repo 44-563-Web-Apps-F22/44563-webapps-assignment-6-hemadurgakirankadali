@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>president page </title>
+        <title>president page</title>
 <h3>Musician guess by Kiran kadali</h3>
 <h2> Getting Input </h2>
 </head>
@@ -29,8 +29,6 @@
                 SecretMusician = document.getElementById("sec3_musician").value
                 guess = document.getElementById("gs3_musician").value
                 
-        
-                
                 if(SecretMusician==guess){
                     correct+=1;
                     alert("You got it right");
@@ -41,6 +39,29 @@
                document.getElementById("result").innerHTML="correct "+correct+"  wrong "+wrong;
             }
     </script>
-
+    <div class="container">
+        <img id="image" src="antlions.jpg" height="100" weight="100" onclick="swapImage()">
+    </div>
+    <script>
+        var useImage=1
+        var img=document.getElementById("image")
+        function swapImage(){
+            switch(useImage){
+                case 1:
+                    img.src="ant lions.jpg"
+                    useImage++
+                    break
+                case 2:
+                    img.src="dobsonfiles.jpg"
+                    useImage++
+                    break
+                case 3:
+                    img.src="Kissing bug.jpg"
+                    useImage=1
+                    break
+                default:
+            }
+        }
+        </script> 
 </body>
 </html> 
